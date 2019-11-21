@@ -7,9 +7,15 @@ class Ticket:
         self.requester_slack = "a-r-g-v"
         self.requester = "argvc0@gmail.com"
         self.status = "Open"
-        self.staled = "2 days"
-        self.created = "2 days"
         self.waiting_on = "@agent1, @agent2, @agent3"
+
+    @property
+    def staled(self):
+        return "2 days"
+
+    @property
+    def created(self):
+        return "2 days"
 
 
 def generate_remind_message(tickets: List[Ticket]) -> str:
