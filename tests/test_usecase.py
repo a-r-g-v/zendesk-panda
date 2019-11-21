@@ -1,3 +1,5 @@
+from zendesk_panda.usecase import generate_remind_message
+
 
 def test_generate_remind_message():
     expected = """Waiting for response
