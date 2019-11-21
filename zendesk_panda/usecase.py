@@ -12,7 +12,7 @@ class Ticket:
         self.waiting_on = "@agent1, @agent2, @agent3"
 
 
-def generate_remind_message(tickets: List[Ticket] = [Ticket()]) -> str:
+def generate_remind_message(tickets: List[Ticket]) -> str:
     header = "Waiting for response\n"
     message = ""
 
