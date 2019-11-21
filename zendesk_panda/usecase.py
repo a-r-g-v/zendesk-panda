@@ -17,8 +17,8 @@ def generate_remind_message(tickets: List[Ticket]) -> str:
     message = ""
 
     for ticket in tickets:
-        message += ("[#{id}] {title} ({requester_slack}, {requester})\n".format(**ticket.__dict__) +
-                    "{staled} stale · {created} old · {status} · Waiting on {waiting_on}".format(**ticket.__dict__))
+        message += (f"[#{ticket.id}] {ticket.title} ({ticket.requester_slack}, {ticket.requester})\n" +
+                    f"{ticket.staled} stale · {ticket.created} old · {ticket.status} · Waiting on {ticket.waiting_on}")
 
     return header + message + "\n"
 
