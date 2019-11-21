@@ -9,14 +9,17 @@ class Ticket:
         self.requester = "argvc0@gmail.com"
         self.status = "Open"
         self.waiting_on = "@agent1, @agent2, @agent3"
+        self.created_at = datetime.now() - timedelta(days=2)
+        self.staled_at = datetime.now() - timedelta(days=2)
+
 
     @property
     def staled(self):
-        return str((datetime.now() - (datetime.now() - timedelta(days=3))).days) + " days"
+        return str((datetime.now() - self.staled_at).days) + " days"
 
     @property
     def created(self):
-        return str((datetime.now() - (datetime.now() - timedelta(days=3))).days) + " days"
+        return str((datetime.now() - self.created_at).days) + " days"
 
 
 def generate_remind_message(tickets: List[Ticket]) -> str:
