@@ -8,6 +8,7 @@ pytest = "*"
 mypy = "*"
 
 [packages]
+humanize = "*"
 
 [requires]
 python_version = "3.7"
