@@ -10,4 +10,4 @@ def test_sent_into_slack(config):
 
 def test_get_unclosed_tickets(config):
     tickets: List[Ticket] = get_unclosed_tickets(config['zendesk_email'], config['zendesk_token'], config['zendesk_subdomain'])
-    assert len(tickets) == 1
+    assert len(list(tickets)) >= 1
