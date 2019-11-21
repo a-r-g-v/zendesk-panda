@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from typing import List
 
 class Ticket:
@@ -11,11 +12,11 @@ class Ticket:
 
     @property
     def staled(self):
-        return "2 days"
+        return str((datetime.now() - (datetime.now() - timedelta(days=3))).days) + " days"
 
     @property
     def created(self):
-        return "2 days"
+        return str((datetime.now() - (datetime.now() - timedelta(days=3))).days) + " days"
 
 
 def generate_remind_message(tickets: List[Ticket]) -> str:
