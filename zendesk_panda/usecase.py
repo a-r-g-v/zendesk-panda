@@ -1,6 +1,9 @@
 from datetime import datetime, timedelta
 from typing import List
 
+from humanize import naturaldelta
+
+
 class Ticket:
     def __init__(self):
         self.id = 1
@@ -14,11 +17,11 @@ class Ticket:
 
     @property
     def staled(self):
-        return str((datetime.now() - self.staled_at).days) + " days"
+        return naturaldelta(self.staled_at)
 
     @property
     def created(self):
-        return str((datetime.now() - self.created_at).days) + " days"
+        return naturaldelta(self.created_at)
 
 
 def generate_remind_message(tickets: List[Ticket]) -> str:
