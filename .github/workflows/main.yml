@@ -1,0 +1,14 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: sudo apt update -y
+    - run: sudo apt install python3.7 -y
+    - run: sudo python3.7 -m pip install pipenv
+    - run: pipenv install --dev
+    - run: make test
