@@ -13,10 +13,14 @@ def test_load_config():
         ZENDESK_EMAIL = "ZENDESK_EMAIL",
         ZENDESK_TOKEN = "ZENDESK_TOKEN",
         ZENDESK_SUBDOMAIN = "ZENDESK_SUBDOMAIN",
+        SLACK_API_TOKEN = "SLACK_API_TOKEN",
+        SLACK_CHANNEL = "SLACK_CHANNEL",
 
     )
     config = load_config(source)
 
-    assert config["email"] == "ZENDESK_EMAIL"
-    assert config["token"] == "ZENDESK_TOKEN"
-    assert config["subdomain"] == "ZENDESK_SUBDOMAIN"
+    assert config["zendesk_email"] == "ZENDESK_EMAIL"
+    assert config["zendesk_token"] == "ZENDESK_TOKEN"
+    assert config["zendesk_subdomain"] == "ZENDESK_SUBDOMAIN"
+    assert config["slack_api_token"] == "SLACK_API_TOKEN"
+    assert config['slack_channel'] == "SLACK_CHANNEL"
