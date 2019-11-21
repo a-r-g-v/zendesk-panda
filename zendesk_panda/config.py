@@ -10,7 +10,9 @@ def load_config(source=os.environ) -> Config:
     :rtype: Config
     """
     return {
-        "email": source["ZENDESK_EMAIL"],
-        "token": source['ZENDESK_TOKEN'],
-        "subdomain": source["ZENDESK_SUBDOMAIN"],
+        "zendesk_email": source["ZENDESK_EMAIL"],
+        "zendesk_token": source['ZENDESK_TOKEN'],
+        "zendesk_subdomain": source["ZENDESK_SUBDOMAIN"],
+        "slack_api_token": source["SLACK_API_TOKEN"],
+        "slack_channel": source["SLACK_CHANNEL"],
     }
