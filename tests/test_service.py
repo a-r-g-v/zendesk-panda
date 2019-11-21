@@ -1,6 +1,6 @@
 from typing import List
 
-from zendesk_panda.service import sent_into_slack
+from zendesk_panda.service import sent_into_slack, get_unclosed_tickets
 from zendesk_panda.usecase import Ticket
 
 
