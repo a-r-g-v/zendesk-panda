@@ -1,7 +1,6 @@
 from typing import List
 
 from slacker import Slacker
-from zenpy import Zenpy
 
 from zendesk_panda.usecase import Ticket
 

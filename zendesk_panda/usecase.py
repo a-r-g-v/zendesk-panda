@@ -1,7 +1,4 @@
-from datetime import datetime, timedelta
 from typing import List
-
-from humanize import naturaldelta
 
 from zendesk_panda.model import Ticket
 
