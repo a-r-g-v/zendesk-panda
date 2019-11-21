@@ -12,7 +12,6 @@ class Ticket:
         self.created_at = datetime.now() - timedelta(days=2)
         self.staled_at = datetime.now() - timedelta(days=2)
 
-
     @property
     def staled(self):
         return str((datetime.now() - self.staled_at).days) + " days"
