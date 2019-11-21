@@ -1,3 +1,4 @@
+from zendesk_panda.service import sent_into_slack
 
 
 def test_sent_into_slack(config):
