@@ -1,4 +1,5 @@
-from zendesk_panda.usecase import generate_remind_message, Ticket
+from zendesk_panda.usecase import generate_remind_message
+from zendesk_panda.model import Ticket
 
 
 def test_generate_remind_message():
